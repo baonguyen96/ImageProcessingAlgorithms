@@ -27,11 +27,11 @@ def compute_integral_image(image):
 
 
 def compute_sum_in_window(image, x1, y1, x2, y2):
-    sum_of_window = 0
-
-    for x in range(x1, x2 + 1):
-        for y in range(y1, y2 + 1):
-            sum_of_window += image[y][x]
+    print(image[y2, x2])
+    print(image[y1 - 1, x1 - 1])
+    print(image[y2, x1 - 1])
+    print(image[y1 - 1, x2])
+    sum_of_window = image[y2, x2] - image[y2, x1 - 1] - image[y1 - 1, x2] + image[y1 - 1, x1 - 1]
 
     return sum_of_window
 
@@ -45,4 +45,6 @@ original_image = [
     [0, 0, 0, 0, 0]
 ]
 
-print(compute_integral_image(original_image))
+integral_image = compute_integral_image(original_image)
+print(integral_image)
+print(compute_sum_in_window(integral_image, 1, 1, 4, 2))
