@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/inspectionProfiles/
 .idea/workspace.xml
+venv/
 venv/Include/
 venv/Lib/site-packages/numpy/__pycache__/
 venv/Lib/site-packages/numpy/compat/__pycache__/
